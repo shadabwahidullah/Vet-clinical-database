@@ -22,3 +22,20 @@ CREATE TABLE species (
     id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     name VARCHAR(255)
 );
+
+-- Modify animals table: 
+-- Make sure that id is set as autoincremented PRIMARY KEY
+\d animals;
+
+ALTER TABLE animals DROP COLUMN species;
+
+ALTER TABLE animals ADD COLUMN species_id int;
+
+ALTER TABLE animals ADD CONSTRAINT species_id_fk FOREIGN KEY (species_id) REFERENCES species(id);
+
+ALTER TABLE animals ADD COLUMN owner_id int;
+
+ALTER TABLE animals ADD CONSTRAINT owner_id_fk FOREIGN KEY (owner_id) REFERENCES owners(id);
+
+
+
