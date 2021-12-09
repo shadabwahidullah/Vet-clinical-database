@@ -11,3 +11,18 @@ INSERT INTO animals (id, name, date_of_birth, escape_attempts, neutured, weight_
 INSERT INTO animals (id, name, date_of_birth, escape_attempts, neutured, weight_kg) VALUES (8, 'Angemon','jun/12/2005',1,true,45);
 INSERT INTO animals (id, name, date_of_birth, escape_attempts, neutured, weight_kg) VALUES (9, 'Boarmon','jun/7/2005',7,true,20.4);
 INSERT INTO animals (id, name, date_of_birth, escape_attempts, neutured, weight_kg) VALUES (10, 'Blossom','oct/13/1998',3,true,17);
+
+INSERT INTO owners (full_name, age) VALUES ( 'Sam Smith', 34);
+INSERT INTO owners (full_name, age) VALUES ( 'Jennifer Orwell', 19);
+INSERT INTO owners (full_name, age) VALUES ( 'Bob', 45);
+INSERT INTO owners (full_name, age) VALUES ( 'Melody Pond', 77);
+INSERT INTO owners (full_name, age) VALUES ( 'Dean Winchester', 14);
+INSERT INTO owners (full_name, age) VALUES ( 'Jodie Whittaker', 38);
+
+
+    Sam Smith 34 years old.
+    Jennifer Orwell 19 years old.
+    Bob 45 years old.
+    Melody Pond 77 years old.
+    Dean Winchester 14 years old.
+    Jodie Whittaker 38 years old.
