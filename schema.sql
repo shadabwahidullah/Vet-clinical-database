@@ -42,7 +42,13 @@ CREATE TABLE vets (
     name VARCHAR(255),
     age INTEGER,
     date_of_graduation DATE
-)
+);
 
+CREATE TABLE specialization (
+    specie_id INT,
+    vet_id INT,
+    CONSTRAINT specie_id_fk FOREIGN KEY (specie_id) REFERENCES species(id),
+    CONSTRAINT vet_id_fk FOREIGN KEY (vet_id) REFERENCES vets(id)
+);
 
 
