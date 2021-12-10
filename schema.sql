@@ -44,10 +44,17 @@ CREATE TABLE vets (
     date_of_graduation DATE
 );
 
-CREATE TABLE specialization (
+CREATE TABLE specializations (
     specie_id INT,
     vet_id INT,
     CONSTRAINT specie_id_fk FOREIGN KEY (specie_id) REFERENCES species(id),
+    CONSTRAINT vet_id_fk FOREIGN KEY (vet_id) REFERENCES vets(id)
+);
+
+CREATE TABLE visits (
+    animal_id INT,
+    vet_id INT,
+    CONSTRAINT animal_id_fk FOREIGN KEY (animal_id) REFERENCES animals(id),
     CONSTRAINT vet_id_fk FOREIGN KEY (vet_id) REFERENCES vets(id)
 );
 
