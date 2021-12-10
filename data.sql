@@ -28,3 +28,8 @@ UPDATE animals SET owner_id = 3 WHERE name = 'Devimon' OR name = 'Plantmon';
 UPDATE animals SET owner_id = 4 WHERE name = 'Charmander' OR name = 'Squirtle' OR name = 'Blossom';
 UPDATE animals SET owner_id = 5 WHERE name = 'Angemon' OR name = 'Boarmon';
 
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('William Tatcher', 45, 'apr/23/2000');
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Maisy Smith', 26, 'jan/17/2019');
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Stephanie Mendez', 64, 'may/4/1981');
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Jack Harkness', 38, 'jun/8/2008');
+
