@@ -28,3 +28,68 @@ UPDATE animals SET owner_id = 3 WHERE name = 'Devimon' OR name = 'Plantmon';
 UPDATE animals SET owner_id = 4 WHERE name = 'Charmander' OR name = 'Squirtle' OR name = 'Blossom';
 UPDATE animals SET owner_id = 5 WHERE name = 'Angemon' OR name = 'Boarmon';
 
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('William Tatcher', 45, 'apr/23/2000');
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Maisy Smith', 26, 'jan/17/2019');
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Stephanie Mendez', 64, 'may/4/1981');
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Jack Harkness', 38, 'jun/8/2008');
+
+-- Vet William Tatcher is specialized in Pokemon.
+INSERT INTO specializations (specie_id, vet_id) VALUES (1,1);
+-- Vet Stephanie Mendez is specialized in Digimon and Pokemon.
+INSERT INTO specializations (specie_id, vet_id) VALUES (1,3);
+INSERT INTO specializations (specie_id, vet_id) VALUES (2,3);
+-- Vet Jack Harkness is specialized in Digimon.
+INSERT INTO specializations (specie_id, vet_id) VALUES (2,4);
+
+-- Agumon visited William Tatcher on May 24th, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (1,1, 'may/24/2020');
+-- Agumon visited Stephanie Mendez on Jul 22th, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (1,3, 'jul/22/2020');
+-- Gabumon visited Jack Harkness on Feb 2nd, 2021.
+INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (2,4, 'feb/2/2021');
+-- Pikachu visited Maisy Smith on Jan 5th, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (3,2, 'jan/5/2020');
+-- Pikachu visited Maisy Smith on Mar 8th, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (3,2, 'may/8/2020');
+-- Pikachu visited Maisy Smith on May 14th, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (3,2, 'may/14/2020');
+-- Devimon visited Stephanie Mendez on May 4th, 2021.
+INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (4,3, 'may/4/2021');
+-- Charmander visited Jack Harkness on Feb 24th, 2021.
+INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (null ,4, 'feb/24/2021');
+-- Plantmon visited Maisy Smith on Dec 21st, 2019.
+INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (null ,2, 'dec/21/2019');
+-- Plantmon visited William Tatcher on Aug 10th, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (null ,1, 'aug/10/2020');
+-- Plantmon visited Maisy Smith on Apr 7th, 2021.
+INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (null ,1, 'apr/7/2021');
+-- Squirtle visited Stephanie Mendez on Sep 29th, 2019.
+    INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (7,3, 'sep/29/2019');
+-- Angemon visited Jack Harkness on Oct 3rd, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (8,4, 'oct/3/2020');
+-- Angemon visited Jack Harkness on Nov 4th, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (8,4, 'nov/4/2020');
+-- Boarmon visited Maisy Smith on Jan 24th, 2019.
+INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (9,2, 'jan/24/2019');
+-- Boarmon visited Maisy Smith on May 15th, 2019.
+INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (9,2, 'may/15/2019');
+-- Boarmon visited Maisy Smith on Feb 27th, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (9,2, 'feb/27/2020');
+-- Boarmon visited Maisy Smith on Aug 3rd, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (9,2, 'aug/3/2020');
+-- Blossom visited Stephanie Mendez on May 24th, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (10,3, 'may/24/2020');
+-- Blossom visited William Tatcher on Jan 11th, 2021.
+INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (10,1, 'jan/11/2021');
+
+
+
+-- Who was the last animal seen by William Tatcher?
+-- How many different animals did Stephanie Mendez see?
+-- List all vets and their specialties, including vets with no specialties.
+-- List all animals that visited Stephanie Mendez between April 1st and August 30th, 2020.
+-- What animal has the most visits to vets?
+-- Who was Maisy Smith's first visit?
+-- Details for most recent visit: animal information, vet information, and date of visit.
+-- How many visits were with a vet that did not specialize in that animal's species?
+-- What specialty should Maisy Smith consider getting? Look for the species she gets the most.
