@@ -92,3 +92,5 @@ SELECT ve.name, COUNT(ve.name) FROM vets ve LEFT JOIN visits v ON ve.id = v.vet_
 -- What specialty should Maisy Smith consider getting? Look for the species she gets the most.
 SELECT ve.name, COUNT(ve.name) FROM visits v  JOIN vets ve ON ve.id = v.vet_id JOIN specializations s ON s.vet_id = v.vet_id WHERE ve.name = 'Maisy Smith' GROUP BY ve.name; 
 
+
+
