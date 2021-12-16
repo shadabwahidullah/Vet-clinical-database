@@ -59,4 +59,6 @@ CREATE TABLE visits (
     CONSTRAINT vet_id_fk FOREIGN KEY (vet_id) REFERENCES vets(id)
 );
 
+CREATE INDEX visits_index ON visits(animal_id);
+
 
