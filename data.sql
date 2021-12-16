@@ -83,13 +83,12 @@ INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (10,3, 'may/24/2020');
 INSERT INTO visits (animal_id, vet_id, visit_date) VALUES (10,1, 'jan/11/2021');
 
 
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120); -- run this command ten times
 
--- Who was the last animal seen by William Tatcher?
--- How many different animals did Stephanie Mendez see?
--- List all vets and their specialties, including vets with no specialties.
--- List all animals that visited Stephanie Mendez between April 1st and August 30th, 2020.
--- What animal has the most visits to vets?
--- Who was Maisy Smith's first visit?
--- Details for most recent visit: animal information, vet information, and date of visit.
--- How many visits were with a vet that did not specialize in that animal's species?
--- What specialty should Maisy Smith consider getting? Look for the species she gets the most.
+
+-- This will add 3.594.280 visits considering you have 10 animals, 4 vets, and it will use around ~87.000 timestamps (~4min approx.)
+INSERT INTO visits (animal_id, vet_id, date_of_visit) SELECT * FROM (SELECT id FROM animals) animal_ids, (SELECT id FROM vets) vets_ids, generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp; --run this command ten times
+
+-- This will add 2.500.000 owners with full_name = 'Owner <X>' and email = 'owner_<X>@email.com' (~2min approx.)
+insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';  --run this command ten times
