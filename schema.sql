@@ -60,5 +60,7 @@ CREATE TABLE visits (
 );
 
 CREATE INDEX visits_index ON visits(animal_id);
+CREATE INDEX email_index ON owners(email ASC);
+CREATE INDEX visits_all_index ON visits(vet_id, animal_id, visit_date);
 
 
